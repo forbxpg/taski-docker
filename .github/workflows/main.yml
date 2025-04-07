@@ -136,7 +136,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
-          target: "taski-docker"
+          target: "/home/yc-user/taski-docker"
       - name: Execute the SSH commands to deploy via Docker Compose
         uses: appleboy/ssh-action@master
         with:
